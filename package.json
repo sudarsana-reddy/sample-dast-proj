@@ -1,0 +1,23 @@
+{
+  "name": "sample-dast-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudarsana-reddy/sample-dast-proj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sudarsana-reddy/sample-dast-proj/issues"
+  },
+  "homepage": "https://github.com/sudarsana-reddy/sample-dast-proj#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
