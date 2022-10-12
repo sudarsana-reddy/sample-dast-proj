@@ -33,8 +33,7 @@ jobs:
       run: |
         echo "Starting express server"
         pm2 start ./app.js
-        echo "started express server, getting the response"
-        curl http://localhost:3000/
+        echo "started express server, getting the response"       
 
     - name: OWASP ZAP API Scan        
       uses: zaproxy/action-api-scan@v0.2.0
