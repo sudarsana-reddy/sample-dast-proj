@@ -15,8 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [18.x]        
 
     steps:
     - uses: actions/checkout@v3
@@ -34,7 +33,8 @@ jobs:
       run: |
         echo "Starting express server"
         pm2 start ./app.js
-        echo "started express server"
+        echo "started express server, getting the response"
+        curl curl http://localhost:3000/
 
     - name: OWASP ZAP API Scan        
       uses: zaproxy/action-api-scan@v0.2.0
