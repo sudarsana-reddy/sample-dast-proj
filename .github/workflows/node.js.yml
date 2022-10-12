@@ -27,7 +27,10 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - name: run app
-      run: node ./app.js
+      run: |
+        echo "Starting express server"
+        nohup node ./app.js
+        echo "started express server"
     - name: OWASP ZAP API Scan        
       uses: zaproxy/action-api-scan@v0.2.0
       with:
