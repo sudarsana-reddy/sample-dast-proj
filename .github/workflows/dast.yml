@@ -26,11 +26,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - name: Installing pm2
+      run:  |
+        echo "Installing pm2 globally"
+        npm install -g pm2@latest
     - name: run app
       run: |
         echo "Starting express server"
-        nohup node ./app.js
+        pm2 start ./app.js
         echo "started express server"
+
     - name: OWASP ZAP API Scan        
       uses: zaproxy/action-api-scan@v0.2.0
       with:
